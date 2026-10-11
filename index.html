@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Petualangan Pesawat Nusantara</title><link rel="stylesheet" href="style.css">
+</head><body>
+<section id="menu" class="screen active">
+ <div class="card">
+  <img src="pesawat.png" class="hero" alt="Pesawat pemain">
+  <h1>Petualangan Pesawat Nusantara</h1><p>Terbang • Belajar • Jelajahi Indonesia</p>
+  <div class="grid">
+   <label>Mode<select id="mode"><option value="1">Solo</option><option value="2">Duo</option><option value="4">Squad</option></select></label>
+   <label>Kelas<select id="grade"></select></label>
+   <label>Mapel<select id="subject"></select></label>
+   <label>Level<select id="difficulty"><option value="easy">Mudah</option><option value="medium">Sedang</option><option value="hard">Sulit</option></select></label>
+  </div>
+  <button id="start">▶ MULAI MISI</button><button id="sound">🔊 SOUND ON</button>
+  <div class="help">Geser pesawat untuk menghindar. Ketuk/geser ke arah musuh untuk menembak. Setelah menghancurkan musuh, jawab soal untuk memperoleh bonus.</div>
+  <small>Game ini dibuat oleh : Eko Angga Purnomo, S.Pd.</small>
+ </div>
+</section>
+<section id="game" class="screen"><canvas id="c"></canvas>
+ <div id="hud"><b id="score">Skor 0</b><b id="progress">Soal 1/10</b><b id="hp">❤️❤️❤️</b><button id="pause">⏸</button></div>
+ <div id="players"></div><div id="msg"></div>
+</section>
+<section id="quiz" class="screen overlay"><div class="quiz"><div id="meta"></div><h2 id="q"></h2><div id="answers"></div><p id="why"></p><button id="next" class="hide">Lanjut ✈️</button></div></section>
+<section id="finish" class="screen overlay"><div class="quiz center"><h1>🏆 Misi Nusantara Selesai!</h1><div id="result"></div><button id="again">Main Lagi</button><button id="home">Menu Utama</button></div></section>
+<script src="game.js"></script></body></html>
